@@ -1,0 +1,66 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+
+    version = '1.0'
+
+    // JVM 版本号要求
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+    //定义版本号
+    ext {
+		springVersion = '4.3.7.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    jar {
+        manifest {
+            attributes("Implementation-Title": "Gradle")
+        }
+    }
+
+    configurations {
+        // 所有需要忽略的包定义在此
+        //all*.exclude group: 'commons-httpclient'
+        //all*.exclude group: 'commons-logging'
+        //all*.exclude group: 'commons-beanutils', module: 'commons-beanutils'
+    }
+
+    dependencies {
+        // 通用依赖
+        compile 'org.slf4j:slf4j-api:1.7.24'
+ 		//spring
+        compile "org.springframework:spring-core:${springVersion}"
+        compile "org.springframework:spring-beans:${springVersion}"
+        compile "org.springframework:spring-context:${springVersion}"
+        compile "org.springframework:spring-jdbc:${springVersion}"
+        compile "org.springframework:spring-tx:${springVersion}"
+        compile "org.springframework:spring-web:${springVersion}"
+        compile "org.springframework:spring-webmvc:${springVersion}"
+        compile "org.springframework:spring-context-support:${springVersion}"
+        compile "org.springframework:spring-aop:${springVersion}"
+        compile "org.springframework:spring-jms:${springVersion}"
+        compile "org.springframework:spring-webmvc:${springVersion}"
+
+        compile "org.springframework:spring-test:${springVersion}"
+        compile ("com.alibaba:dubbo:2.5.3"){
+            exclude group: 'org.springframework', module: 'spring'
+        }
+        compile "com.101tec:zkclient:0.7"
+        compile "org.apache.zookeeper:zookeeper:3.4.6"
+        
+        //lombok
+        compile 'org.projectlombok:lombok:1.16.18'
+        // 测试依赖
+        testCompile(
+                "junit:junit:4.12"
+        )
+    }
+}
