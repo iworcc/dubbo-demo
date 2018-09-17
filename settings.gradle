@@ -1,2 +1,2 @@
 rootProject.name = 'dubbo-demo'
-include 'dubbo-provider','dubbo-consumer'
+include 'dubbo-provider','dubbo-consumer','dubbo-common'

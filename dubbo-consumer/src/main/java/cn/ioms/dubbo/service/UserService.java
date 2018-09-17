@@ -1,8 +1,11 @@
 package cn.ioms.dubbo.service;
 
+import java.util.List;
+
 import cn.ioms.dubbo.entity.User;
 
-public interface UserMapper {
+
+public interface UserService {
     int deleteByPrimaryKey(Long id);
 
     int insert(User record);
@@ -14,4 +17,6 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    
+    List<User> queryAllUser() throws Exception;
 }

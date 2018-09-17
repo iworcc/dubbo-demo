@@ -11,11 +11,11 @@
 			connectionURL="jdbc:mysql://ioms.cn:3306/demo"
 			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
 		<javaModelGenerator
-			targetPackage="cn.ioms.dubbo.entity" targetProject="dubbo-consumer/src/main/java" />
+			targetPackage="cn.ioms.dubbo.entity" targetProject="dubbo-provider/src/main/java" />
 		<sqlMapGenerator targetPackage="mapper"
-			targetProject="dubbo-consumer/src/main/resources" />
+			targetProject="dubbo-provider/src/main/resources" />
 		<javaClientGenerator
-			targetPackage="cn.ioms.dubbo.service" targetProject="dubbo-consumer/src/main/java"
+			targetPackage="cn.ioms.dubbo.service" targetProject="dubbo-provider/src/main/java"
 			type="XMLMAPPER" />
 		<table schema="User" tableName="user" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
