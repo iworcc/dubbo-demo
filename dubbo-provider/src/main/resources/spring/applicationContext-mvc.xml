@@ -27,7 +27,7 @@
 	<mvc:default-servlet-handler />
 	<!-- 指定要扫描的包的位置 -->
 	<context:component-scan
-		base-package="cn.ioms.dubbo.controller" />
+		base-package="cn.ioms.dubbo.provider.controller" />
 	<mvc:resources location="/resources/"
 		mapping="/resources/**" />
 

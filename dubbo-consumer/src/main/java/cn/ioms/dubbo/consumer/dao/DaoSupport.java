@@ -10,6 +10,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
+import cn.ioms.dubbo.dao.DAO;
+
 @Repository("daoSupport")
 public class DaoSupport implements DAO {
 

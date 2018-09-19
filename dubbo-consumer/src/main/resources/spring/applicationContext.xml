@@ -18,6 +18,9 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:jdbc.properties" />
 	</bean>
+	<!-- <bean class="cn.ioms.dubbo.config.ConfigUtils"> <property name="fileEncoding" 
+		value="UTF-8"/> <property name="locations"> <list> 数据库参数配置 <value>classpath:jdbc.properties</value> 
+		</list> </property> </bean> -->
 	<bean id="dataSource"
 		class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
 		<property name="driverClassName" value="${driver}" />
@@ -40,8 +43,8 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- mybatis缓存 -->
-		<!-- <property name="configLocation"
-			value="classpath:mybatis/mybatis-config.xml"></property> -->
+		<property name="configLocation"
+			value="classpath:spring/mybatis-config.xml"></property>
 		<!-- 自动扫描mapper.xml文件 -->
 		<property name="mapperLocations"
 			value="classpath*:mapper/*.xml"></property>

@@ -18,6 +18,6 @@
     <dubbo:protocol name="dubbo" port="20884" />
     
     <!-- 生成远程服务代理，可以和本地bean一样使用 -->
-    <!-- <dubbo:reference id="providerService" interface="cn.ioms.dubbo.service.ProviderService" check="false"/> -->
+    <dubbo:reference id="userService" interface="cn.ioms.dubbo.service.UserService" check="false"/>
     
 </beans>
