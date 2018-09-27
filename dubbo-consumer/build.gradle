@@ -3,4 +3,7 @@ apply plugin: 'war'
 dependencies {
 
 	compile project(":dubbo-common")
+	compile 'io.springfox:springfox-swagger2:2.7.0'
+    compile 'io.springfox:springfox-swagger-ui:2.7.0'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
 }

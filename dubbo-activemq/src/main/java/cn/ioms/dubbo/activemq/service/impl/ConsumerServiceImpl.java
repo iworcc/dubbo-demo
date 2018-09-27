@@ -8,8 +8,10 @@ import javax.jms.TextMessage;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
+import cn.ioms.dubbo.service.activemq.ConsumerService;
+
 @Service
-public class ConsumerServiceImpl {
+public class ConsumerServiceImpl implements ConsumerService{
 
 	@Resource(name="jmsTemplate")
     private JmsTemplate jmsTemplate;

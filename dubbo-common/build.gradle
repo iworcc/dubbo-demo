@@ -1,5 +1,5 @@
 apply plugin: 'java'
 
 dependencies {
-
+	compile "org.apache.activemq:activemq-core:5.7.0"
 }

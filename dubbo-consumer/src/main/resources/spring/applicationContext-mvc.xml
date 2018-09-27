@@ -29,4 +29,7 @@
 		base-package="cn.ioms.dubbo.consumer.controller" />
 	<mvc:resources location="/resources/"
 		mapping="/resources/**" />
+		<!--重要！配置swagger资源不被拦截-->
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
 </beans>

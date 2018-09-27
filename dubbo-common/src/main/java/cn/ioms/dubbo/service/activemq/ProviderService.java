@@ -1,4 +1,4 @@
-package cn.ioms.dubbo.activemq.service;
+package cn.ioms.dubbo.service.activemq;
 
 import javax.print.attribute.standard.Destination;
 

@@ -70,4 +70,5 @@
 		<property name="messageListener" ref="queueMessageListener" />
 	</bean>
 
+	<import resource="dubbo-provider.xml"/>
 </beans>

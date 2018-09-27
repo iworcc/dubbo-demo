@@ -10,9 +10,10 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
-import cn.ioms.dubbo.activemq.service.ProviderService;
+import cn.ioms.dubbo.service.activemq.ProviderService;
 
-@Service
+
+@Service("providerService")
 public class ProviderServiceImpl implements ProviderService{
 
 	@Resource(name="jmsTemplate")
